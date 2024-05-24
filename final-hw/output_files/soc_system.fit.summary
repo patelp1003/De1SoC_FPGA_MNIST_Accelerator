@@ -1,0 +1,20 @@
+Fitter Status : Successful - Wed May 15 02:45:20 2024
+Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+Revision Name : soc_system
+Top-level Entity Name : soc_system_top
+Family : Cyclone V
+Device : 5CSEMA5F31C6
+Timing Models : Final
+Logic utilization (in ALMs) : 798 / 32,070 ( 2 % )
+Total registers : 921
+Total pins : 342 / 457 ( 75 % )
+Total virtual pins : 0
+Total block memory bits : 322,416 / 4,065,280 ( 8 % )
+Total RAM Blocks : 40 / 397 ( 10 % )
+Total DSP Blocks : 1 / 87 ( 1 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 1 / 6 ( 17 % )
+Total DLLs : 1 / 4 ( 25 % )

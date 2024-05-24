@@ -1,0 +1,70 @@
+
+State Machine - |soc_system_top|soc_system:soc_system0|soc_system_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:vga_ball_0_avalon_slave_0_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |soc_system_top|soc_system:soc_system0|vga_ball:vga_ball_0|top:top_acc|cu:control_unit|current_state
+Name current_state.S21 current_state.S20 current_state.S19 current_state.S18 current_state.S17 current_state.S16 current_state.S15 current_state.S14 current_state.S13 current_state.S12 current_state.S11 current_state.S10 current_state.S9 current_state.S8 current_state.S7 current_state.S6 current_state.S5 current_state.S4 current_state.S3 current_state.S2 current_state.S1 current_state.S0 
+current_state.S0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.S1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.S2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.S3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.S4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.S5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.S6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.S7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.S8 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.S9 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.S10 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.S11 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S12 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S13 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S14 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S15 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S16 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S17 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S18 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S19 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S20 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S21 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |soc_system_top|soc_system:soc_system0|vga_ball:vga_ball_0|vga_interface:m2|state_q
+Name state_q.delay state_q.display state_q.idle 
+state_q.delay 0 0 0 
+state_q.idle 1 0 1 
+state_q.display 1 1 0 
+
+State Machine - |soc_system_top|soc_system:soc_system0|vga_ball:vga_ball_0|camera_interface:m0|state_q
+Name state_q.fifo_write state_q.byte2 state_q.byte1 state_q.vsync_fedge state_q.delay state_q.digest_loop state_q.write_data state_q.write_address state_q.start_sccb state_q.idle 
+state_q.idle 0 0 0 0 0 0 0 0 0 0 
+state_q.start_sccb 0 0 0 0 0 0 0 0 1 1 
+state_q.write_address 0 0 0 0 0 0 0 1 0 1 
+state_q.write_data 0 0 0 0 0 0 1 0 0 1 
+state_q.digest_loop 0 0 0 0 0 1 0 0 0 1 
+state_q.delay 0 0 0 0 1 0 0 0 0 1 
+state_q.vsync_fedge 0 0 0 1 0 0 0 0 0 1 
+state_q.byte1 0 0 1 0 0 0 0 0 0 1 
+state_q.byte2 0 1 0 0 0 0 0 0 0 1 
+state_q.fifo_write 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |soc_system_top|soc_system:soc_system0|vga_ball:vga_ball_0|camera_interface:m0|debounce_explicit:m4|state_reg
+Name state_reg.delay1 state_reg.one state_reg.delay0 state_reg.idle 
+state_reg.idle 0 0 0 0 
+state_reg.delay0 0 0 1 1 
+state_reg.one 0 1 0 1 
+state_reg.delay1 1 0 0 1 
+
+State Machine - |soc_system_top|soc_system:soc_system0|vga_ball:vga_ball_0|camera_interface:m0|i2c_top:m0|state_q
+Name state_q.stop_1 state_q.ack_master state_q.read state_q.renew_data state_q.ack_servant state_q.packet state_q.starting state_q.idle state_q.stop_2 
+state_q.idle 0 0 0 0 0 0 0 0 0 
+state_q.starting 0 0 0 0 0 0 1 1 0 
+state_q.packet 0 0 0 0 0 1 0 1 0 
+state_q.ack_servant 0 0 0 0 1 0 0 1 0 
+state_q.renew_data 0 0 0 1 0 0 0 1 0 
+state_q.read 0 0 1 0 0 0 0 1 0 
+state_q.ack_master 0 1 0 0 0 0 0 1 0 
+state_q.stop_1 1 0 0 0 0 0 0 1 0 
+state_q.stop_2 0 0 0 0 0 0 0 1 1 
